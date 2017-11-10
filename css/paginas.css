@@ -135,12 +135,13 @@ img.miPerFoto {
 	background: #0C0C0C;
 	margin-bottom: 20px;
 }
-.gal {
+.contenedor-imagenesPortafolio {
 	-webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
 	}
-.gal img{
+.contenedor-imagenesPortafolio img{
+	position: relative;
 	width: 100%;
 	margin: 7px 0;
 	border: 2px solid #fff;
@@ -149,7 +150,7 @@ img.miPerFoto {
 	border-radius: 5px 5px 5px 5px;
 }
 @media (max-width: 500px) {
-	.gal {
+	.contenedor-imagenesPortafolio {
 		-webkit-column-count: 1; /* Chrome, Safari, Opera */
 		-moz-column-count: 1; /* Firefox */
 		column-count: 1;
@@ -189,4 +190,30 @@ img.miPerFoto {
 	padding: 20% 0;
 	min-height: 720px;
 	background-image: url(../img/fondo2.jpg);
+}
+
+/*////////*/
+.portafolio-imagen img{
+	transition: .3s;
+}
+.portafolio-imagen{
+	display: inline-block;
+	position:relative;
+}
+.portafolio-imagen:hover img{
+	filter: blur(2px) brightness(20%);
+}
+.portafolio-imagen .hashtag-imagen{
+	position: absolute;
+	top: 30%;
+	z-index: 1;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	opacity: 0;
+	transition:.3s;
+}
+.portafolio-imagen:hover :not(img){
+	opacity: 1;
+
 }
